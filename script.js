@@ -20,8 +20,8 @@ alert('Вход выполнен успешно!');
 
 function uploadToMega(data) {
 const storage = mega({
-email: 'YOUR_MEGA_EMAIL',
-password: 'YOUR_MEGA_PASSWORD'
+email: 'ttserafim9@gmail.com',
+password: 'cat201376'
 }, function(err, account) {
 if (err) {
 console.error('Error logging in to MEGA:', err);
