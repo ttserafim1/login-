@@ -116,22 +116,3 @@ background: linear-gradient(135deg, #0072ff, #00c6ff);
 color: red;
 margin-top: 10px;
 }
-
-JavaScript (script.js)
-
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-event.preventDefault();
-
-const username = document.getElementById('username').value;
-const password = document.getElementById('password').value;
-const errorMessage = document.getElementById('errorMessage');
-
-// Пример проверки учетных данных
-if (username === 'user' && password === 'password') {
-alert('Успешный вход!');
-// Перенаправление на главную страницу или другую страницу
-window.location.href = 'index.html';
-} else {
-errorMessage.textContent = 'Неверное имя пользователя или пароль';
-}
-});
