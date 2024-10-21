@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration</title>
+<style>
 body {
 font-family: Arial, sans-serif;
 margin: 0;
@@ -49,3 +56,50 @@ h2 {
 text-align: center; /* Центрирование заголовков */
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для заголовков */
 }
+
+.form-container {
+display: none;
+}
+
+.form-container.active {
+display: block;
+}
+</style>
+</head>
+<body>
+<button onclick="showForm('login')">Вход</button>
+<button onclick="showForm('register')">Регистрация</button>
+
+<div id="login" class="form-container active">
+<h2>Вход</h2>
+<form>
+<label for="username">Имя пользователя:</label>
+<input type="text" id="username" name="username" required><br><br>
+<label for="password">Пароль:</label>
+<input type="password" id="password" name="password" required><br><br>
+<button type="submit">Войти</button>
+</form>
+</div>
+
+<div id="register" class="form-container">
+<h2>Регистрация</h2>
+<form>
+<label for="email">Электронная почта:</label>
+<input type="email" id="email" name="email" required><br><br>
+<label for="username">Имя пользователя:</label>
+<input type="text" id="username" name="username" required><br><br>
+<label for="password">Пароль:</label>
+<input type="password" id="password" name="password" required><br><br>
+<button type="submit">Зарегистрироваться</button>
+</form>
+</div>
+
+<script>
+function showForm(formId) {
+document.getElementById('login').classList.remove('active');
+document.getElementById('register').classList.remove('active');
+document.getElementById(formId).classList.add('active');
+}
+</script>
+</body>
+</html>
